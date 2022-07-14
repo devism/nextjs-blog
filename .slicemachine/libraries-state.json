@@ -1,39 +1,39 @@
 {
   "slices": {
     "components": {
-      "my_slice": {
+      "blog_content": {
         "library": "slices",
-        "id": "my_slice",
-        "name": "MySlice",
-        "description": "MySlice",
+        "id": "blog_content",
+        "name": "BlogContent",
+        "description": "BlogContent",
         "model": {
-          "id": "my_slice",
+          "id": "blog_content",
           "type": "SharedSlice",
-          "name": "MySlice",
-          "description": "MySlice",
+          "name": "BlogContent",
+          "description": "BlogContent",
           "variations": [
             {
               "id": "default",
               "name": "Default",
               "docURL": "...",
               "version": "sktwi1xtmkfgx8626",
-              "description": "MySlice",
+              "description": "BlogContent",
               "primary": {
-                "title": {
+                "content": {
                   "type": "StructuredText",
                   "config": {
-                    "single": "heading1",
-                    "label": "Title",
-                    "placeholder": "This is where it all begins..."
+                    "label": "Content",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
                   }
                 },
-                "description": {
-                  "type": "StructuredText",
+                "image": {
+                  "type": "Image",
                   "config": {
-                    "label": "Description",
-                    "placeholder": "A nice description of your feature",
-                    "allowTargetBlank": true,
-                    "single": "paragraph"
+                    "label": "Image",
+                    "constraint": {},
+                    "thumbnails": []
                   }
                 }
               },
@@ -46,23 +46,77 @@
           "default": {
             "variation": "default",
             "name": "Default",
-            "slice_type": "my_slice",
+            "slice_type": "blog_content",
             "items": [],
             "primary": {
-              "title": [
+              "content": [
                 {
-                  "type": "heading1",
-                  "text": "Transform ubiquitous initiatives",
+                  "type": "paragraph",
+                  "text": "Non minim voluptate in ea veniam culpa veniam minim qui ut.",
                   "spans": []
                 }
               ],
-              "description": [
-                {
-                  "type": "paragraph",
-                  "text": "Cupidatat aliqua culpa reprehenderit dolor enim consectetur aliquip. Duis ut eu enim pariatur aliquip sint dolor consectetur sit. Est ut consectetur eiusmod nostrud sunt laborum pariatur labore consequat sunt esse do sunt deserunt.",
-                  "spans": []
+              "image": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": "Placeholder image",
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1504198070170-4ca53bb1c1fa?w=900&h=500&fit=crop"
+              }
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
+      },
+      "nav_link": {
+        "library": "slices",
+        "id": "nav_link",
+        "name": "NavLink",
+        "description": "NavLink",
+        "model": {
+          "id": "nav_link",
+          "type": "SharedSlice",
+          "name": "NavLink",
+          "description": "NavLink",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "NavLink",
+              "primary": {
+                "navlink": {
+                  "type": "Link",
+                  "config": {
+                    "label": "Navlink",
+                    "placeholder": "",
+                    "select": null
+                  }
                 }
-              ]
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "name": "Default",
+            "slice_type": "nav_link",
+            "items": [],
+            "primary": {
+              "navlink": {
+                "link_type": "Web",
+                "url": "http://twitter.com"
+              }
             }
           }
         },

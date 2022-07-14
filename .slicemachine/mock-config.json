@@ -7,7 +7,24 @@
           "blocks": 1
         }
       }
-    }
+    },
+    "navigation": {
+      "title": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      }
+    },
+    "blog": {
+      "title": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      }
+    },
+    "blogpage": {}
   },
   "slices": {
     "MySlice": {
@@ -20,6 +37,18 @@
             }
           }
         }
+      }
+    },
+    "Navigation": {},
+    "NavLink": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "BlogContent": {
+      "default": {
+        "primary": {},
+        "items": {}
       }
     }
   }

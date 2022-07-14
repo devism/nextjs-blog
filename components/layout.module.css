@@ -4,12 +4,50 @@
     margin: 3rem auto 6rem;
   }
   
-  .header {
+ 
+
+  .header{
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
   }
+  .header img{
+    width: 100px;
+  }
   
+  .navigation{
+    display:none;
+    /* display: inline-flex; */
+  }
+
+  .navmobile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 0px;
+  }
+
   .backToHome {
     margin: 3rem 0 0;
+  }
+
+  /* media query */
+
+  @media only screen and (min-width: 640px) {
+
+    .header {
+      display: flex;
+      justify-content: flex-start;
+      align-items: end;
+    }
+
+    .navigation{
+      
+      display: inline-flex;
+    }
+
+    .navmobile{
+      display:none;
+    }
   }

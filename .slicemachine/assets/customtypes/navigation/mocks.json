@@ -1,0 +1,77 @@
+{
+  "id": "0e321217-8b05-4b31-a956-133960e2d6d7",
+  "uid": "quibusdam-aspernatur-labore",
+  "type": "navigation",
+  "data": {
+    "title": [
+      {
+        "type": "paragraph",
+        "text": "Cillum Lorem velit cillum dolore nostrud amet excepteur sit commodo ullamco est ullamco consectetur dolor sint. Sit culpa quis do est elit officia officia.",
+        "spans": []
+      }
+    ],
+    "navImage": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=900&h=500&fit=crop"
+    },
+    "navlinks": [
+      {
+        "pagelink": {
+          "link_type": "Web",
+          "url": "https://prismic.io"
+        },
+        "linktext": [
+          {
+            "type": "paragraph",
+            "text": "Veniam amet proident dolore cillum cillum. Consectetur est mollit laboris Lorem sint veniam adipisicing irure quis ipsum cupidatat quis nisi.",
+            "spans": []
+          }
+        ]
+      },
+      {
+        "pagelink": {
+          "link_type": "Web",
+          "url": "https://prismic.io"
+        },
+        "linktext": [
+          {
+            "type": "paragraph",
+            "text": "Aliqua aliquip deserunt minim non eu magna. Elit ad voluptate voluptate ut incididunt. Ipsum est sit elit id officia cillum occaecat enim cupidatat aliquip magna sint.",
+            "spans": []
+          }
+        ]
+      },
+      {
+        "pagelink": {
+          "link_type": "Web",
+          "url": "http://twitter.com"
+        },
+        "linktext": [
+          {
+            "type": "paragraph",
+            "text": "Id est duis aute mollit aliquip aute consequat ipsum voluptate ad. Consequat nisi sit ullamco dolor do ex. Cillum minim duis elit dolor duis consectetur eiusmod amet non excepteur.",
+            "spans": []
+          }
+        ]
+      },
+      {
+        "pagelink": {
+          "link_type": "Web",
+          "url": "https://prismic.io"
+        },
+        "linktext": [
+          {
+            "type": "paragraph",
+            "text": "Aliqua quis id aliqua nisi ea exercitation laborum sit. Magna veniam dolore deserunt aliquip cupidatat minim qui.",
+            "spans": []
+          }
+        ]
+      }
+    ]
+  }
+}

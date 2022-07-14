@@ -1,7 +1,7 @@
 import React from 'react'
 import { RichText } from 'prismic-reactjs'
 
-const MySlice = ({ slice }) => (
+const BlogContent = ({ slice }) => (
   <section>
     <span className="title">
       {
@@ -28,4 +28,4 @@ const MySlice = ({ slice }) => (
   </section>
 )
 
-export default MySlice
+export default BlogContent
