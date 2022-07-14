@@ -1,7 +1,7 @@
 .container {
     max-width: 36rem;
     padding: 0 1rem;
-    margin: 3rem auto 6rem;
+ 
   }
   
  
@@ -19,6 +19,20 @@
     display:none;
     /* display: inline-flex; */
   }
+
+.menu_button{
+  text-align: center;
+}  
+
+.mobile_menu_wrapper{
+  text-align: center;
+  max-height: 0;
+  transition: max-height, .3s;
+}
+
+.show_menu{
+  max-height: 999px;
+}
 
   .navmobile{
     display: flex;

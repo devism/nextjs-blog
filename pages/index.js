@@ -30,27 +30,38 @@ export async function getStaticProps({ previewData }) {
 
 
 export default function Home({page, nav}) {
+
+  function mobileMenu(){
+    alert('EW');
+  }
+
   return (
     <Layout>
       <Head>
         <title>{siteTitle}</title>
       </Head>
+      
+      <div onClick={mobileMenu} className={styles.menu_button}><h2>Menu</h2></div>
+      
+      <div className={styles.mobile_menu_wrapper}>
+        
+      
+        <nav className={styles.navmobile}>
+      
+          <PrismicLink href="/">
+            <p>HOME</p>
+          </PrismicLink>
+        
 
-      <nav className={styles.navmobile}>
-     
-        <PrismicLink href="/">
-          <p>HOME</p>
-        </PrismicLink>
-       
-
-        {nav.data.navlinks.map( (element) => (
-          <a href={Link.url(element.pagelink)}>
-          <RichText render={element.linktext} />
-          </a>
-         
-          ))
-         }
+          {nav.data.navlinks.map( (element) => (
+            <a href={Link.url(element.pagelink)}>
+            <RichText render={element.linktext} />
+            </a>
+          
+            ))
+          }
         </nav>
+        </div>  
       <header className={styles.header}>
 
        
