@@ -10,7 +10,7 @@ import { SliceZone } from '@prismicio/react';
 import { components } from '../slices';
 import { Link } from 'prismic-reactjs';
 import { PrismicLink } from '@prismicio/react';
-
+import { useState } from 'react';
 
 
 export async function getStaticProps({ previewData }) {
@@ -31,9 +31,11 @@ export async function getStaticProps({ previewData }) {
 
 export default function Home({page, nav}) {
 
-  function mobileMenu(){
-    alert('EW');
-  }
+  const [isMenuOpen, setMenu] = useState(false);
+
+  const mobileMenuClass = isMenuOpen ?  `${styles.show_menu}` : ` ${styles.hide_menu}`
+
+
 
   return (
     <Layout>
@@ -41,18 +43,14 @@ export default function Home({page, nav}) {
         <title>{siteTitle}</title>
       </Head>
       
-      <div onClick={mobileMenu} className={styles.menu_button}><h2>Menu</h2></div>
+      <div onClick={() => setMenu(!isMenuOpen) } className={styles.menu_button}>
+        <h2>Menu</h2>
+      </div>
       
-      <div className={styles.mobile_menu_wrapper}>
+      <div className={ mobileMenuClass }>
         
-      
         <nav className={styles.navmobile}>
       
-          <PrismicLink href="/">
-            <p>HOME</p>
-          </PrismicLink>
-        
-
           {nav.data.navlinks.map( (element) => (
             <a href={Link.url(element.pagelink)}>
             <RichText render={element.linktext} />
@@ -61,49 +59,39 @@ export default function Home({page, nav}) {
             ))
           }
         </nav>
-        </div>  
+      </div>  
       <header className={styles.header}>
 
-       
-
+      <div>   
         <div>
-        <img src={nav.data.navImage.url} alt={nav.data.navImage.alt} />
+          <h1 className={styles.main_title}>Jason Begin Sound</h1>
         </div>
-
+        <PrismicLink href="/">
+          <img src={nav.data.navImage.url} alt={nav.data.navImage.alt} />
+        </PrismicLink>
+      </div>   
+      
+     
         
 
+          {/* desktop nav */}
+      <nav className={styles.navigation}> 
 
-        <nav className={styles.navigation}> 
-
-        <PrismicLink href="/">
-          <p>HOME</p>
-        </PrismicLink>
-       
-         {/* <a href={Link.url(nav.data.navlinks[0].pagelink)}>
-           <RichText render={nav.data.navlinks[0].linktext} />
-           </a> */}
-
-         {/* <a href={Link.url(nav.data.navlinks[1].pagelink)}>
-           <RichText render={nav.data.navlinks[1].linktext} />
-         </a>   */}
          {nav.data.navlinks.map( (element) => (
           <a href={Link.url(element.pagelink)}>
           <RichText render={element.linktext} />
           </a>
          
           ))
-         }
-
-          
-        </nav>
-        { console.log(nav)}
+         }          
+      </nav>
+    
       </header>
      
       <div>
         
          <RichText render={page.data.homeText} />
-          {console.log(page)}
-          {/* this works */}
+    
         
           
         
