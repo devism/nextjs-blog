@@ -35,7 +35,10 @@ export default function Home({page, nav}) {
 
   const mobileMenuClass = isMenuOpen ?  `${styles.show_menu}` : ` ${styles.hide_menu}`
 
+  // hamburgerlines
+  // const [hamLines, setHamLines] = useState(false);
 
+  const hamburgerLinesClass = isMenuOpen ? `${styles.ham_animate}`: `${styles.hamburger}`
 
   return (
     <Layout>
@@ -44,31 +47,52 @@ export default function Home({page, nav}) {
       </Head>
       
       <div onClick={() => setMenu(!isMenuOpen) } className={styles.menu_button}>
-        <h2>Menu</h2>
+          <div className={styles.ham_wrapper}>
+            <div className={hamburgerLinesClass}></div>
+            <div className={hamburgerLinesClass}></div>
+            <div className={hamburgerLinesClass}></div>
+          </div>
       </div>
       
       <div className={ mobileMenuClass }>
         
         <nav className={styles.navmobile}>
+
+          <PrismicLink href="/blog">
+            <p>Blog</p>
+          </PrismicLink>
+
+          <PrismicLink href="/blog">
+            <p>Store</p>
+          </PrismicLink>
+
+          <PrismicLink href="/media">
+            <p>Media</p>
+          </PrismicLink>
+
+          <PrismicLink href="/contact">
+            <p>Contact</p>
+          </PrismicLink>
       
-          {nav.data.navlinks.map( (element) => (
+          {/* {nav.data.navlinks.map( (element) => (
             <a href={Link.url(element.pagelink)}>
             <RichText render={element.linktext} />
             </a>
           
             ))
-          }
+          } */}
         </nav>
       </div>  
       <header className={styles.header}>
 
-      <div>   
-        <div>
-          <h1 className={styles.main_title}>Jason Begin Sound</h1>
-        </div>
+      <div className={styles.logo_title}>   
         <PrismicLink href="/">
           <img src={nav.data.navImage.url} alt={nav.data.navImage.alt} />
         </PrismicLink>
+        <div>
+          <h1 className={styles.main_title}>Jason Begin Sound</h1>
+        </div>
+       
       </div>   
       
      
@@ -76,21 +100,37 @@ export default function Home({page, nav}) {
 
           {/* desktop nav */}
       <nav className={styles.navigation}> 
+          <PrismicLink href="/blog">
+            <p>Blog</p>
+          </PrismicLink>
 
-         {nav.data.navlinks.map( (element) => (
+          <PrismicLink href="/blog">
+            <p>Store</p>
+          </PrismicLink>
+
+          <PrismicLink href="/media">
+            <p>Media</p>
+          </PrismicLink>
+
+          <PrismicLink href="/contact">
+            <p>Contact</p>
+          </PrismicLink>
+
+
+         {/* {nav.data.navlinks.map( (element) => (
           <a href={Link.url(element.pagelink)}>
           <RichText render={element.linktext} />
           </a>
          
           ))
-         }          
+         }           */}
       </nav>
     
       </header>
      
       <div>
         
-         <RichText render={page.data.homeText} />
+         {/* <RichText render={page.data.homeText} /> */}
     
         
           
